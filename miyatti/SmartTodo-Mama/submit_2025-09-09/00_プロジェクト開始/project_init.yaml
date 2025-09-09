@@ -1,0 +1,11 @@
+program_id: AIPM_Hackathon
+project_id: SmartTodo-Mama
+participant_name: 未設定
+flow_dir: hackathon_new
+flow_base: "Flow/202509/2025-09-09/hackathon_new"
+stock_base: "Stock/programs/AIPM_Hackathon/projects/SmartTodo-Mama"
+period: 未設定
+purpose: 共働きママの時間圧に対し、判断負荷を下げ効率化を支援する
+background: 朝/昼/夜での判断遅延とコンテキスト混在が生産性を下げている
+share_repo: libyn-inc/aipm-hackathon-share
+share_local_dir: Share/aipm-hackathon-share

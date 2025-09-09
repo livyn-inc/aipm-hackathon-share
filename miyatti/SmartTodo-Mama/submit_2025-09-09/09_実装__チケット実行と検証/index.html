@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TODO MVP</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1 id="header-title">今日の一番</h1>
+
+    <section class="toolbar">
+      <input id="task-input" type="text" placeholder="タスクを入力" aria-label="タスクを入力">
+      <button id="add-btn" class="btn btn-primary" type="button">追加</button>
+      <button id="mode-btn" class="btn" type="button" aria-pressed="false">仕事モード</button>
+    </section>
+
+    <section class="focus-card" aria-live="polite">
+      <div class="focus-title">今やる一つ</div>
+      <div id="focus-label" class="focus-label">今やるタスクはありません</div>
+      <button id="do-now-btn" class="btn" type="button">今やる</button>
+    </section>
+
+    <section>
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    </section>
+
+    <!-- ST3: 達成感可視化（進捗/バッジ） -->
+    <section class="progress-card" aria-live="polite">
+      <div class="progress-title">進捗</div>
+      <div id="progress-area" class="progress-area">0 / 0 (0%)</div>
+      <div id="badge-area" class="badge-area"></div>
+    </section>
+
+    <!-- SC2: 詳細/完了 + 隙間時間マッチング（ST3） -->
+    <section class="detail-card" aria-live="polite">
+      <div class="detail-title">タスク詳細 / 隙間時間候補</div>
+      <div class="time-tools">
+        <input id="time-input" type="number" min="1" step="1" placeholder="利用可能分（例: 5）" aria-label="利用可能時間(分)">
+        <button id="suggest-btn" class="btn" type="button">候補</button>
+      </div>
+      <ul id="suggest-list" class="suggest-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

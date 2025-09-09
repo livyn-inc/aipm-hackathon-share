@@ -1,0 +1,62 @@
+customer_problem_map:
+  persona_ref: P001
+  phases:
+    - id: PH1
+      name: "朝の準備・出社前"
+      actions:
+        - id: A101
+          label: "起床後の家事タスク確認"
+          thoughts: ["今何をすべきか瞬時に判断したい", "限られた時間で効率的に動きたい"]
+          emotions: ["焦り", "迷い"]
+          issues: [PR1]
+        - id: A102
+          label: "保育園準備と送迎"
+          thoughts: ["忘れ物がないか心配", "ルーティンを効率化したい"]
+          emotions: ["不安", "急かされる感覚"]
+          issues: [PR1]
+    - id: PH2
+      name: "仕事中・昼休み"
+      actions:
+        - id: A201
+          label: "昼休みの連絡帳記入"
+          thoughts: ["短時間で確実に終わらせたい", "他にもやることがある"]
+          emotions: ["時間に追われる感覚"]
+          issues: [PR2]
+        - id: A202
+          label: "仕事タスクと家事タスクの切り替え"
+          thoughts: ["どちらを優先すべきか迷う", "混在して管理が大変"]
+          emotions: ["混乱", "ストレス"]
+          issues: [PR2]
+    - id: PH3
+      name: "帰宅後・夜の時間"
+      actions:
+        - id: A301
+          label: "夕食準備中の隙間時間活用"
+          thoughts: ["5分でできることが分からない", "時間を無駄にしたくない"]
+          emotions: ["もどかしさ"]
+          issues: [PR3]
+        - id: A302
+          label: "寝かしつけ後の自分時間"
+          thoughts: ["残った家事を効率的に片付けたい", "自分の時間も欲しい"]
+          emotions: ["疲労", "罪悪感"]
+          issues: [PR3]
+        - id: A303
+          label: "翌日のタスク準備"
+          thoughts: ["安心して眠りにつけるよう整理したい", "明日の準備を確実に"]
+          emotions: ["不安", "責任感"]
+          issues: [PR3]
+  problems:
+    - id: PR1
+      summary: "朝の限られた時間で何から手をつけるか瞬時に判断できない"
+      linked_actions: [A101, A102]
+      occurs_in_phases: [PH1]
+    - id: PR2
+      summary: "仕事と家事のタスクが混在し、優先度判断に迷う"
+      linked_actions: [A201, A202]
+      occurs_in_phases: [PH2]
+    - id: PR3
+      summary: "隙間時間で何ができるか分からず、効率的に時間を使えない"
+      linked_actions: [A301, A302, A303]
+      occurs_in_phases: [PH3]
+  numbering_policy:
+    - "prefix: PH=Phase, A=Action, PR=Problem"

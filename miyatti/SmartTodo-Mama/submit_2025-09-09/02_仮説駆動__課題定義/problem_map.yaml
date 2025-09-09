@@ -1,0 +1,55 @@
+problem_map:
+  persona_ref: P001
+  problems:
+    - id: PR1
+      summary: "朝の限られた時間で何から手をつけるか瞬時に判断できない"
+      causes: 
+        - "タスクの優先度基準が不明確"
+        - "時間制約がきつく判断時間がない"
+        - "ルーティン化されていない"
+      impact: 
+        time_loss: "毎回3-5分の判断時間ロス"
+        frequency: "毎朝発生（週5-7回）"
+        emotional: "焦り、迷い、不安"
+        ripple_effect: "家族との時間圧迫、遅刻リスク"
+      linked_actions: [A101, A102]
+      occurs_in_phases: [PH1]
+      current_workaround: "手書きメモ、頭の中で管理"
+      
+    - id: PR2
+      summary: "仕事と家事のタスクが混在し、優先度判断に迷う"
+      causes:
+        - "異なる種類のタスクを同じ場所で管理"
+        - "コンテキストスイッチのコストが高い"
+        - "緊急度と重要度の判断基準が曖昧"
+      impact:
+        time_loss: "コンテキスト切り替えで5-10分ロス"
+        frequency: "昼休み、仕事中に頻発（週10-15回）"
+        emotional: "混乱、ストレス、集中力低下"
+        ripple_effect: "仕事効率低下、家事の後回し"
+      linked_actions: [A201, A202]
+      occurs_in_phases: [PH2]
+      current_workaround: "スマホのメモアプリ、口約束"
+      
+    - id: PR3
+      summary: "隙間時間で何ができるか分からず、効率的に時間を使えない"
+      causes:
+        - "短時間でできるタスクの把握不足"
+        - "時間の見積もりが不正確"
+        - "自分時間への罪悪感"
+      impact:
+        time_loss: "5-10分の隙間時間を活用できない"
+        frequency: "夜の時間帯に頻発（週7-10回）"
+        emotional: "もどかしさ、疲労、罪悪感、不安"
+        ripple_effect: "自分時間の確保困難、睡眠時間圧迫"
+      linked_actions: [A301, A302, A303]
+      occurs_in_phases: [PH3]
+      current_workaround: "思いついたことを口頭で夫と共有"
+
+  numbering_policy:
+    - "prefix: PR=Problem, A=Action"
+    
+  validation_notes:
+    - "各課題は仮説段階であり、ユーザーインタビューでの検証が必要"
+    - "定量的な影響度（時間ロス、頻度）は推定値"
+    - "根本原因の深掘りが必要（なぜなぜ分析の継続）"

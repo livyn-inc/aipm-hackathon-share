@@ -1,0 +1,17 @@
+screen: SC2
+title: 詳細/完了
+tokens:
+  color_primary: "#3b82f6"
+  color_bg: "#ffffff"
+  spacing: 8
+  radius: 12
+  font_size_title: 18
+layout:
+  title:   {x: 24, y: 16, w: 512, h: 24, text: "タスク詳細"}
+  detail:  {x: 24, y: 56, w: 464, h: 200}
+  doneBtn: {x: 24, y: 264, w: 120, h: 36, text: "完了"}
+  backBtn: {x: 160, y: 264, w: 120, h: 36, text: "戻る"}
+links_stories: [ST3]
+accessibility:
+  focus_order: [doneBtn, backBtn]
+  aria: []
