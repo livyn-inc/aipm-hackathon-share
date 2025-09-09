@@ -1,0 +1,40 @@
+solution_map:
+  persona_ref: P001
+  problems: [PR1, PR2, PR3]
+  phases:
+    - id: PH1
+      name: 利用前
+      solutions:
+        - id: SL1
+          label: "朝のルーティンテンプレート機能"
+          links: [PR1, A101, A102]
+    - id: PH2
+      name: 利用中
+      solutions:
+        - id: SL2
+          label: "コンテキスト分離機能（仕事モード・家事モード）"
+          links: [PR2, A201, A202]
+    - id: PH3
+      name: 利用後
+      solutions:
+        - id: SL3
+          label: "隙間時間マッチング機能"
+          links: [PR3, A301, A302, A303]
+  numbering_policy:
+    - "prefix: SL=Solution, PH=Phase"
+
+mvp_priority:
+  - rank: 1
+    solution_id: SL2
+    reason: "最も頻度が高い課題（週10-15回）で検証効果が明確"
+  - rank: 2
+    solution_id: SL1
+    reason: "毎日発生する課題で効果測定が容易"
+  - rank: 3
+    solution_id: SL3
+    reason: "複雑な機能で長期検証が必要"
+
+solution_hypothesis:
+  statement: "コンテキスト分離とスマートルーティン、時間マッチング機能を提供することで、より多くの共働きママが迷わず効率的にタスクを管理し、家族時間と自分時間を確保できるようになると信じています。"
+  target_behavior_change: "迷わず効率的にタスクを管理し、家族時間と自分時間を確保"
+  solution_summary: "コンテキスト分離とスマートルーティン、時間マッチング機能"

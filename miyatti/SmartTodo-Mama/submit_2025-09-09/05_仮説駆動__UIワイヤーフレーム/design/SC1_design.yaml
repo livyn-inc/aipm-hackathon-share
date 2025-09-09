@@ -1,0 +1,21 @@
+screen: SC1
+title: メイン
+tokens:
+  color_primary: "#3b82f6"
+  color_bg: "#f8fafc"
+  spacing: 8
+  radius: 12
+  font_size_title: 20
+layout:
+  header: {x: 24, y: 16, w: 512, h: 28, text: "今日の一番"}
+  input:  {x: 24, y: 56, w: 360, h: 36, placeholder: "タスクを入力"}
+  addBtn: {x: 392, y: 56, w: 96,  h: 36, text: "追加"}
+  list:   {x: 24, y: 104, w: 464, h: 320}
+  modeBtn:{x: 24, y: 440, w: 160, h: 36, text: "仕事モード"}
+links_stories: [ST1, ST2]
+accessibility:
+  focus_order: [input, addBtn, list, modeBtn]
+  aria:
+    - element: modeBtn
+      role: button
+      aria-pressed: true|false

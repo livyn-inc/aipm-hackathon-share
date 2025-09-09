@@ -1,0 +1,25 @@
+screens:
+  - id: SC1
+    title: メイン
+    links_stories: [ST1, ST2]
+  - id: SC2
+    title: 詳細/完了
+    links_stories: [ST3]
+mapping:
+  ST1: SC1
+  ST2: SC1
+  ST3: SC2
+flows:
+  MVP:
+    - from: SC1
+      action: 今やる
+      to: SC2
+    - from: SC2
+      action: 完了
+      to: SC1
+  Release1:
+    - from: SC1
+      action: 時間選択
+      to: SC2
+numbering_policy:
+  - prefix: SC=Screen 

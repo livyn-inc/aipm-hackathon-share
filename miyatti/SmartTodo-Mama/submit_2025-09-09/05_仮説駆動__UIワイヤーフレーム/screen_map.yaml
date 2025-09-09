@@ -1,0 +1,13 @@
+screens:
+  - id: SC1
+    title: メイン
+    links_stories: [ST1, ST2]
+  - id: SC2
+    title: 詳細/完了
+    links_stories: [ST3]
+mapping:
+  ST1: SC1
+  ST2: SC1
+  ST3: SC2
+numbering_policy:
+  - prefix: SC=Screen

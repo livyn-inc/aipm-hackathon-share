@@ -1,0 +1,74 @@
+story_map:
+  persona_ref: P001
+  problem_refs: [PR1, PR2, PR3]
+  links:
+    - chain: [A101, PR1, SL1, ST1]
+    - chain: [A201, PR2, SL2, ST2]
+    - chain: [A301, PR3, SL3, ST3]
+  stories:
+    - id: ST1
+      summary: "As a 共働きママ, I want 朝の準備で「今すぐやるべき1つのタスク」だけを表示してほしい, So that 迷わず効率的に準備を進められる"
+      acceptance: 
+        - "時間制約（残り時間）に応じて最優先タスクが1つだけ表示される"
+        - "タスク完了後、次の優先タスクが自動で表示される"
+        - "保育園準備の忘れ物チェックリストが時間に応じて表示される"
+      release: "MVP"
+      links: [PR1, SL1, A101, A102]
+      
+    - id: ST2
+      summary: "As a 共働きママ, I want 仕事モードと家事モードを切り替えて、今のコンテキストに集中したい, So that 混乱せずにタスクを効率的に処理できる"
+      acceptance:
+        - "ワンタップで仕事モード・家事モードを切り替えられる"
+        - "各モードで関連するタスクのみが表示される"
+        - "緊急度・重要度に応じてタスクが自動で優先順位付けされる"
+      release: "MVP"
+      links: [PR2, SL2, A201, A202]
+      
+    - id: ST3
+      summary: "As a 共働きママ, I want 隙間時間（5分、10分等）に応じて最適なタスクを提案してほしい, So that 短い時間も無駄にせず有効活用できる"
+      acceptance:
+        - "利用可能時間を入力すると、その時間でできるタスクが提案される"
+        - "タスク完了時に達成感を可視化する機能がある"
+        - "隙間時間の活用実績が記録・表示される"
+      release: "Release1"
+      links: [PR3, SL3, A301, A302, A303]
+      
+  releases:
+    - name: MVP
+      includes: [ST2, ST1]  # 優先度順
+      target_timeline: "4-5週間"
+      success_criteria:
+        - "コンテキストスイッチ時間50%短縮"
+        - "朝の準備時間20%短縮"
+        - "ユーザー継続利用率80%以上"
+        
+    - name: Release1
+      includes: [ST3]
+      target_timeline: "8-12週間"
+      success_criteria:
+        - "隙間時間活用率70%達成"
+        - "タスク完了満足度4.0以上"
+        
+  implementation_order: "ST2 → ST1 → ST3"
+  
+  numbering_policy:
+    - "prefix: ST=Story"
+    
+  story_details:
+    - id: ST2
+      priority_rank: 1
+      development_effort: "中"
+      validation_complexity: "低"
+      user_impact: "高"
+      
+    - id: ST1
+      priority_rank: 2
+      development_effort: "中"
+      validation_complexity: "低"
+      user_impact: "中"
+      
+    - id: ST3
+      priority_rank: 3
+      development_effort: "高"
+      validation_complexity: "高"
+      user_impact: "中"
